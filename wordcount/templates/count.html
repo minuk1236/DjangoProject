@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>입력한 텍스트는 <strong>"{{total}}"</strong> 단어로 구성되어 있습니다. </h1>
+<hr>
+<h2>입력한 텍스트 </h2>
+<textarea cols="150" rows="10">
+    {{fulltext}}
+</textarea>
+
+<hr>
+<h1>단어 카운트 :  </h1> 
+{% for word, countTotal in dictionary %}
+{{word}} : {{countTotal}} 개
+<br>
+{% endfor %}
+
+<br>
+
+<button type="button" class="btn btn-outline-secondary" onclick="location.href={% url 'wordcount' %}">다시하기</button>
+{% endblock %}

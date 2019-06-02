@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row align-items-center justify-content-between">
+    <div class="col-lg-6 col-md-12 col-sm-12 about-left">
+        <h1>ABOUT</h1>
+        <hr>
+        <p>안녕하세요. WORDCOUNT 입니다.</p>
+        <p>입력한 단어를 세어 줍니다. </p>
+        <p>감사합니다.</p>
+
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 about-right">
+        <h1>EXAM WORDCOUNT</h1>
+        <hr>
+        <form action="{% url 'count' %}">
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <input type="submit" class="btn btn-outline-secondary" value="Count">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

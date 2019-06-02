@@ -1,0 +1,178 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+  <!-- Author Meta -->
+  <meta name="author" content="Colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>안녕하세요</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500,600" rel="stylesheet">
+  <!--
+		CSS
+		============================================= -->
+  <link rel="stylesheet" href="{% static 'css/linearicons.css'%}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+
+<body>
+  <div class="main-wrapper-first">
+    <div class="hero-area relative">
+      <header>
+        <div class="container">
+          <div class="header-wrap">
+            <div class="header-top d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <a href="{% url 'home' %}"><h1>미눅's WEB</h1></a>
+              </div>
+              <div class="main-menubar d-flex align-items-center">
+                <nav class="hide">
+                  <a href="{% url 'home' %}">Home</a>
+                  <a href="{% url 'wordcount'%}">WORDCOUNT</a>
+                  <a href="{% url 'home' %}">BLOG(미구현)</a>
+                  <a href="{% url 'home' %}">PORTFOLIO(미구현)</a>
+                </nav>
+                <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="banner-area relative">
+        <div class="overlay hero-overlay-bg"></div>
+        <div class="container">
+          <div class="row height align-items-center justify-content-center">
+            <div class="col-lg-7">
+              <div class="banner-content text-center">
+                <h1 class="text-uppercase text-white"><span>안녕하세요.</span> <br> 한국산업기술대 송민욱 입니다.</h1>
+                <p class="text-white p-2 mb-30">
+                  화이팅~~!
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="main-wrapper">
+
+    <!-- Start about Area 공통인 곳??? -->
+    <section class="about-area pt-100 pb-100">
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+<!--               <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+
+                  <h1 class="text-uppercase">
+                    <span>PRACTICE</span> <br>
+                    WORDCOUNT
+                  </h1>
+                  <p>
+                    WORDCOUNT 실습 및 과제 제출용으로 부트스트랩 템플릿에 적용 해봤습니다.
+                  </p>
+                  <a class="learn-btn text-uppercase" href="{% url 'wordcount' %}">Details</a>
+                
+                </div>
+              </div> -->
+            </div>
+          </section>
+          <!-- End about Area -->
+
+    <!-- 	
+			<section class="feature-area pt-100 pb-100">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Multiple Layouts</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Endless Features</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Responsive View</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Clean Coding</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Fully Customizables</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 d-flex flex-row">
+							<div class="single-feature">
+								<h2 class="text-uppercase">Flexible Design</h2>
+								<p>
+									Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		 -->
+
+
+
+
+
+  </div>
+
+  <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
+  <script
+    src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous'%}"></script>
+  <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
+  <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+  <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{% static 'js/waypoints.min.js'%}"></script>
+  <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>
+
+
+
