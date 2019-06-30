@@ -2142,19 +2142,19 @@ body:after {
 }
 
 .about-right .lnr {
-  color: #a387ff;
+  color: #222222;
   font-size: 30px;
 }
 
 .about-right h1 {
   font-size: 36px;
   font-weight: 100;
-  color: #a387ff;
+  color: #222222;
 }
 
 .about-right h1 span {
   font-weight: 600;
-  color: #000;
+  color: #222222;
 }
 
 .about-right p {
@@ -2174,7 +2174,7 @@ body:after {
 }
 
 .about-right .learn-btn:hover {
-  color: #a387ff;
+  color: #222222;
 }
 
 .single-feature {
@@ -2208,7 +2208,7 @@ body:after {
 .single-fact p {
   font-size: 24px;
   font-weight: 100;
-  color: #a387ff;
+  color: #222222;
 }
 
 .secvice-area {
@@ -2253,7 +2253,7 @@ body:after {
 }
 
 .view-details {
-  color: #a387ff;
+  color: #222222;
   background: #fff;
   font-weight: 600;
   font-size: 14px;
@@ -2267,7 +2267,7 @@ body:after {
 }
 
 .single-feat2 .count h1 {
-  color: #a387ff;
+  color: #222222;
   font-size: 48px;
 }
 

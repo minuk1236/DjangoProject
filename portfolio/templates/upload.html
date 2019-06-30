@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>ABOUT</h1>
+<br>
+<h3>사진올리기 페이지 입니다.</h3>
+<hr>
+<br>
+
+<div class = "container">
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+    <a class="btn btn-outline-secondary" href="{% url 'portfolio' %}" role="button">돌아가기</a>
+	  <input class="btn btn-outline-secondary" type="submit" value="업로드">
+  </form>
+</div>
+
+{% endblock %}

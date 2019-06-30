@@ -3,6 +3,6 @@
 
 한국산업기술대 송민욱 입니다.
 
-아직 WordCount 기능 밖에 없습니다.
+WordCount , Blog, Portfolio 실습 및 보완 했습니다.
 
-화이팅~~
+감사합니다.

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+<h1>ABOUT</h1>
+<br>
+<h3>포트폴리오 페이지 입니다.</h3>
+<a class="btn btn-outline-secondary pull-right" href="{% url 'upload' %}" role="button">업로드</a>
+<br><br>
+<hr>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="{% static '사진1.jpg' %}" alt="">
+                    <div class="card-body">
+                            <h4>테스트 1번</h4>
+                        <p class="card-text">테스트 게시글 1번 입니다.</p>
+                        <div class="d-flex justify-content-between pull-right">
+                            <div class="btn-group ">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View(X)</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit(X)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="{% static '사진2.jpg' %}" alt="">
+                    <div class="card-body">
+                            <h4>테스트 2번</h4>
+                        <p class="card-text">테스트 게시글 2번 입니다.</p>
+                        <div class="d-flex justify-content-between pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View(X)</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit(X)</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm"><img class="card-img-top" src="{% static '사진3.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4>테스트 3번</h4>
+                        <p class="card-text">테스트 게시글 3번 입니다.</p>
+                        <div class="d-flex justify-content-between pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View(X)</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit(X)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% for portfolio in portfolios.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ portfolio.image.url }}" alt=" Card image cap">
+                <div class="card-body">
+                  <h4>{{ portfolio.title }}</h4>
+                  <p class="card-text">{{ portfolio.description }}</p>
+                  <div class="d-flex justify-content-between pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View(X)</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit(X)</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
